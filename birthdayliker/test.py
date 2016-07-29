@@ -1,6 +1,8 @@
 import facebook
 
-graph = facebook.GraphAPI('EAAC1bqIXC1YBAPFIJqrxS0psLCSoWZA4ElhkkhgI7FlQEj0qqc15JGZBogK2DTXqHpm8OjnhhSJE3xOG48J55Fxb1f32xOrZAEHPeZAonCcsqP62vQF3oRiqusAhVFksgYBGPliRD30IzKw1sVv824e0B2AQBmsZD')
+token = input("Paste your Facebook access token over here: ")
+
+graph = facebook.GraphAPI(token)
 
 me = graph.get_object('me')
 
