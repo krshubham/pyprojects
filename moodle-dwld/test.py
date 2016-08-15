@@ -3,19 +3,10 @@ try:
 	from selenium.webdriver.common.keys import Keys
 except ImportError:
 	print "Dependencies not satsfied"
-driver = webdriver.Firefox()
-driver.get("http://moodlecc.vit.ac.in")
-# username = driver.find_element_by_name("name")
-# password = driver.find_element_by_name("password")
-# username.clear()
-# password.clear()
-# username.send_keys("krshubham")
-# password.send_keys("shubhi")
-# username.send_keys(Keys.RETURN)
-# title = driver.find_element_by_name("title")
-# title.clear()
-# title.send_keys("Testing thr web app")
-# content = driver.find_element_by_name("content")
-# content.clear()
-# content.send_keys("Test is successful")
-# content.submit()
+driver = webdriver.Chrome()
+driver.get("https://docs.google.com/forms/d/1mytyPTLJ00m2BLjeSHBB64a2VTgyBUkdCVNkdVlAwoU/viewform?edit_requested=true")
+boxes = driver.find_elements_by_class_name('quantumWizTextinputPaperinputInput')
+print boxes
+arr = ['Kumar Shubham','test','youu','youu','youu','youu','youu']
+for i in range(0,len(boxes)):
+	boxes[i].send_keys(arr[i]);
