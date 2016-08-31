@@ -1,4 +1,4 @@
-#!/media/ks/common/Git-projects/facepy-autolike/facebookenv/bin/python2
+#!/media/ks/common/Git-projects/pyprojects/birthdayliker/facebookenv/bin/python2
 
 # -*- coding: utf-8 -*-
 import re

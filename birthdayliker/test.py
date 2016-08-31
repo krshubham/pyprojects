@@ -1,32 +1,21 @@
 import facebook
 
-token = input("Paste your Facebook access token over here: ")
+token = "EAACEdEose0cBAOgplgLYsWNZBHedsy7LIvifFgZCV2txee2rZASuo6veIO9GzyqGcmZB4ZCyLRqxlNC8ZC91iaXW9P5neekgKNQ9AYvuVUWDc2q9HVnKikxVrbaBTDXdZBASb9k9hZAwmFEcmQyRkfCq5ULLp05XPoV6ZCsq6opQZAuAZDZD"
 
 graph = facebook.GraphAPI(token)
 
 me = graph.get_object('me')
 
+friends = graph.get_connections('me','friends')
+
 myfeed = graph.get_connections('me','feed')
 
-posts = myfeed['data']
-
+posts = myfeed['data'][0]['id']
 
 words = ['bday','hbd','bday','birthday','HBD']
-for post in posts:
-	try:
-		for i in words:
-			if(i in post['message']):
-				print("Yes")
-	except KeyError:
-		#this means that its a story
-		#Let's grab the id of the story
-		id = str(post['id'])
-		story = graph.get_object(id)
-		for i in words:
-			try:
-				if(i in story['message']):
-					graph.put_like(id)
-				else:
-					continue
-			except KeyError:
-				continue
+
+print(posts['likes']['paging']['cursors']['after'])
+
+feedLink = feeds['paging']['next'].replace('https://graph.facebook.com/', '')
+
+gr
