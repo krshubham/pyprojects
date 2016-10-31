@@ -3,6 +3,7 @@
 #You should install facepy API to use this $pip install facepy
 #Specify your api key and birthday date
 oath_token='EAACEdEose0cBALf5o0p85GsmFeo2ZAad1ZBq30QHqWHxzc1BZAMoosFpeANJr6GZBZAXcauZARUfzRXWlnh7ug06O9VOxm4ODenHTeCtGSAquEx3aXr0Sl0a9WzoY5YUJODaxm95s1h4rxbM7RwrX4lUHGhs4LVha7eiZAZBQq1mZAAZDZD'
+my_birth_date = parser.parse('1997-08-17T00:00:00+0000')
 
 #You need not change any code below this line
 from facepy import GraphAPI
@@ -15,7 +16,6 @@ graph = GraphAPI(oath_token)
 
 #some variables specific to the app
 my_facebook_id = graph.get('me')['id'].encode('utf-8')
-my_birth_date = parser.parse('1997-08-17T00:00:00+0000')
 fetchMoreFeeds = True
 feedLink = "me/feed"
 posts = []
