@@ -1,14 +1,16 @@
 # pyprojects
-A collection of some interesting Python Projects.
+pyprojects is a collection of different types of Python Projects.
+
+The list belows references the types of projects included in this repo.
 
 ## Birthday Liker
-This project will like all the posts on your facebook wall which are in context of wishing birthday.
+This projects will find all relevant posts about 'birthdays' and like them on your Facebook wall.
 
-## face_Detect
+## Face Detect
 
-This is a python facedetection project.
+This is a python face detection project.
 
-## momentum 
+## Momentum 
 
 **need more details to add relevant data**
 
